@@ -1,0 +1,78 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+<title>ECommerce</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Iconic Bootstrap 4.5.0 Admin Template">
+<meta name="author" content="WrapTheme, design by: ThemeMakker.com">
+
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<!-- VENDOR CSS -->
+<link rel="stylesheet" href="{% static 'assets1/vendor/bootstrap/css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'assets1/vendor/font-awesome/css/font-awesome.min.css' %}">
+<link rel="stylesheet" href="{% static 'assets1/vendor/jvectormap/jquery-jvectormap-2.0.3.min.css' %}"/>
+<link rel="stylesheet" href="{% static 'assets1/vendor/charts-c3/plugin.css' %}"/>
+
+<link rel="stylesheet" href="{% static 'assets1/vendor/jquery-datatable/dataTables.bootstrap4.min.css' %}">
+<link rel="stylesheet" href="{% static 'assets1/vendor/jquery-datatable/fixedeader/dataTables.fixedcolumns.bootstrap4.min.css' %}">
+<link rel="stylesheet" href="{% static 'assets1/vendor/jquery-datatable/fixedeader/dataTables.fixedheader.bootstrap4.min.css' %}">
+<link rel="stylesheet" href="{% static 'assets1/vendor/sweetalert/sweetalert.css' %}"/>
+<style>
+    .annual_report .c3-axis.c3-axis-y{ display: none;}
+    .annual_report .c3-axis.c3-axis-x{ display: none;}
+    td.details-control {
+    background: url('{% static 'assets1/images/details_open.png' %}') no-repeat center center;
+    cursor: pointer;
+}
+    tr.shown td.details-control {
+        background: url('{% static 'assets1/images/details_close.png' %}') no-repeat center center;
+    }
+</style>
+<!-- MAIN CSS -->
+<link rel="stylesheet" href="{% static 'assets1/css/main.css' %}">
+</head>
+
+<body data-theme="light" class="font-nunito">
+
+<div id="wrapper" class="theme-cyan">
+
+{% include "dashboard/Dashboard/header1.html" %}
+
+{% include "dashboard/Dashboard/sidenav.html" %}
+
+{% block main-content %}{% endblock main-content %}
+
+
+</div>
+
+<!-- Javascript -->
+<script src="{% static 'assets1/bundles/libscripts.bundle.js' %}"></script>    
+<script src="{% static 'assets1/bundles/vendorscripts.bundle.js' %}"></script>
+
+<script src="{% static 'assets1/bundles/jvectormap.bundle.js' %}"></script> <!-- JVectorMap Plugin Js -->
+<script src="{% static 'assets1/bundles/c3.bundle.js' %}"></script>
+
+<script src="{% static 'assets1/bundles/datatablescripts.bundle.js' %}"></script>
+<script src="{% static 'assets1/vendor/jquery-datatable/buttons/dataTables.buttons.min.js' %}"></script>
+<script src="{% static 'assets1/vendor/jquery-datatable/buttons/buttons.bootstrap4.min.js' %}"></script>
+<script src="{% static 'assets1/vendor/jquery-datatable/buttons/buttons.colVis.min.js' %}"></script>
+<script src="{% static 'assets1/vendor/jquery-datatable/buttons/buttons.html5.min.js' %}"></script>
+<script src="{% static 'assets1/vendor/jquery-datatable/buttons/buttons.print.min.js' %}"></script>
+
+<script src="{% static 'assets1/vendor/sweetalert/sweetalert.min.js' %}"></script> <!-- SweetAlert Plugin Js --> 
+
+
+
+<!-- page js file -->
+<script src="{% static 'assets1/bundles/mainscripts.bundle.js' %}"></script>
+<script src="{% static 'js/pages/tables/jquery-datatable.js' %}"></script>
+
+<!-- page js file -->
+<script src="{% static 'assets1/bundles/mainscripts.bundle.js' %}"></script>
+<script src="{% static 'js/index8.js' %}"></script>
+</body>
+</html>

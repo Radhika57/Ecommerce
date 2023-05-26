@@ -1,0 +1,45 @@
+{% extends 'dashboard/Dashboard/base1.html' %}
+{% load static %}
+{%load crispy_forms_tags %}
+{% block main-content %}
+
+
+<div id="main-content">
+    <div class="container-fluid">
+        <div class="block-header">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{% url 'dashboard' %}"><i class="fa fa-dashboard"></i></a></li>
+                        <li class="breadcrumb-item"><a href="{% url 'clothescategorylist' %}">Category</a> </li>
+                        <li class="breadcrumb-item active"><a href="{% url 'addcategory' %}">Add Category</a> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row clearfix">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header">
+                        <h2>Add Category</h2>
+                    </div>
+                    <div class="body">
+                        <form id="basic-form" method="post" enctype="multipart/form-data" novalidate>
+
+                            {% csrf_token %}
+                            {{ form | crispy }}
+                            <br>
+                            <button type="submit" class="btn btn-primary">Add</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock main-content %}
